@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Money Tracker App</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Money Tracker</h1>
+        
+        <!-- Form for adding a new transaction -->
+        <form id="transactionForm">
+            <label for="type">Type:</label>
+            <select id="type" name="type">
+                <option value="income">Income</option>
+                <option value="expense">Expense</option>
+            </select>
+
+            <label for="description">Description:</label>
+            <input type="text" id="description" name="description" required>
+
+            <label for="amount">Amount:</label>
+            <input type="number" id="amount" name="amount" step="0.01" required>
+
+            <button type="button" onclick="addTransaction()">Add Transaction</button>
+        </form>
+
+        <!-- Display transactions -->
+        <div id="transactionList"></div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+</body>
+</html>
